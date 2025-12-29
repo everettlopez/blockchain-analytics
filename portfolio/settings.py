@@ -12,6 +12,19 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 
 from pathlib import Path
 
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+ALCHEMY_API_KEY = os.getenv("ALCHEMY_API_KEY")
+ALCHEMY_URL = os.getenv("ALCHEMY_URL")
+
+CMC_PRO_API_KEY = os.getenv("CMC_PRO_API_KEY")
+CMC_URL = os.getenv("CMC_URL")
+
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -37,6 +50,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'dashboard',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
