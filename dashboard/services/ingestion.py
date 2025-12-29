@@ -6,7 +6,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "portfolio.settings")
 django.setup()
 
-from datetime import datetime
+from datetime import datetime, timezone
 import json
 import requests 
 from django.conf import settings
