@@ -17,12 +17,15 @@ class Command(BaseCommand):
         "BTC"
         ]
 
+        # Extract
         for symbol in token_symbols:
             fetch_token_prices(symbol)
 
-
         raw = load_raw_prices()
+
+        # Transform
         normalized = normalize_prices(raw)
         
+        # Load
         load_prices(normalized)
         self.stdout.write(self.style.SUCCESS("Price ETL completed"))
