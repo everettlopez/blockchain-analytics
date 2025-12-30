@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pocket Chain</title>
+    <title>Pocket Chain - Home</title>
     <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="static/styles.css">
 
     <!-- Google Fonts-->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script
+        src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js"
+        type="module"></script>
 
 </head>
 
@@ -29,33 +32,57 @@
 
     <main>
         <div class="index-welcome-section">
-            <h2>Start Your Journey In Crypto Today</h2>
-            <p>Sign-Up today and earn 3.5% on your next purchase</p>
 
-            <button>Get Started</button>
+            <div>
+                <dotlottie-wc
+                    src="https://lottie.host/2e86fc77-a608-4a2f-b547-d725a19d24e4/YPwxdbZLGU.lottie"
+                    style="width: 300px;height: 300px"
+                    autoplay
+                    loop></dotlottie-wc>
+            </div>
+
+            <div class="index-welcome-section-text">
+                <h2>The easiest way to dive into the world of blockchain.</h2>
+
+                <div class="index-welcome-section-button-section">
+                    <a href="login/"><button class="index-welcome-section-button-login">GET STARTED</button></a>
+                    <button class="index-welcome-section-button-sign-up">I ALREADY HAVE AN ACCOUNT</button>
+                </div>
+                
+            </div>
+
         </div>
 
         <div class="card-row">
 
             <div class="card">
-                <h3>Bitcoin</h3>
+                <img src="static/images/Bitcoin.svg.png" alt="Bitcoin (BTC) Logo" class="token-icon"/>
+                <span>BITCOIN</span>
             </div>
 
             <div class="card">
-                <h3>Ethereum</h3>
+                <img src="static/images/ethereum-eth-logo.png" alt="Ethereum (ETH) Logo" class="token-icon"/>
+                <span>ETHEREUM</span>
             </div>
 
             <div class="card">
-                <h3>
-                    Chainlink
-                </h3>
+                <img src="static/images/chainlink-link-logo.png" alt="Chainlink (LINK) Logo" class="token-icon"/>
+                <span>CHAINLINK</span>
             </div>
             
             <div class="card">
-                <h3>USDT</h3>
+                <img src="static/images/USDT_Logo.png" alt="Tether (USDT) Logo" class="token-icon"/>
+                <span>UDST</span>
             </div>
         </div>
 
+        <div class="index-learning-section">
+            <div class="index-learning-section-text">
+                <h3>free. easy. fun.</h3>
+                <p>Learn how blockchain technology is reshaping our definition of finance and currency with bite-sized lessons.</p>
+            </div>
+            
+        </div>
     </main>
     <footer>
         

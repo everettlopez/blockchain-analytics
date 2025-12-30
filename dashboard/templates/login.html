@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocket Chain - Login</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script
+        src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js"
+        type="module"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>PocketChain</h1>
+
+        <nav>
+            <ul>
+                <li>Home</li>
+            </ul>
+        </nav>
+
+        <button>Get Started</button>
+    </header>
+
+    <main>
+        <div class="login-section">
+            <form action="" method="get">
+                <h2>Log In</h2>
+                <p>Need a PocketChain account? <a href="">Create an Account</a></p>
+
+                <div class="login-form-section">
+                    <label for="username">Username or Email</label>
+                    <input type="text" id="username" name="username"/>
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password"/>
+
+                    <div class="login-form-section-checkbox">
+                        <input type="checkbox" id="stay-logged-in-checkbox" name="stay-logged-in-checkbox"/>
+                        <label>Keep me logged in</label>
+                    </div>
+
+                    <button>Login</button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>
