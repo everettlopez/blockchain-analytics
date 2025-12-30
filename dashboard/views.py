@@ -3,6 +3,9 @@ from django.shortcuts import render
 from django.http import JsonResponse 
 from .models import Balance, Metadata, Price
 
+def index(request):
+    return render(request, "index.html")
+
 def get_latest_balances(request):
     data = list(
         Balance.objects.order_by("-timestamp")[:20].values()

@@ -1,0 +1,59 @@
+
+h2 {
+    font-family: "Poppins", sans-serif;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+
+    font-family: "Nunito", sans-serif;
+}
+
+header button {
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: #d0312d;
+    color: white;
+
+    font-family: "Nunito", sans-serif;
+}
+
+header button:hover{
+    background-color: #bc544B;
+}
+
+/* Welcome Section */
+.index-welcome-section {
+    padding: 50px 0px 50px 0px;
+}
+
+/* Horizontal Price Checker */
+.card-row {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.card {
+    width: 150px;
+    text-align: center;
+}
+
+.card:hover {
+    background-color: lightgray;
+}
