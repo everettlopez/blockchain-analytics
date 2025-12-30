@@ -1,14 +1,18 @@
+/* Global Section*/
+
 main {
     display: flex; 
     justify-content: center; /* horizontal centering */ 
     align-items: center; /* vertical centering */ 
+    padding: 1rem;
 }
 
+/* Login Section */
 .login-section {
     border: 2px solid lightgray;
     border-radius: 8px;
-    width: 33.33vw;
-    padding: 3rem;
+    width: 30vw;
+    padding: 1.25rem;
 
     gap: 1rem;
 
@@ -19,6 +23,8 @@ main {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    padding: 0.5rem;
+
 }
 
 .login-form-section-checkbox {
@@ -27,4 +33,77 @@ main {
     gap: 0.5rem;
 
     padding: 10px 0px 10px 0px;
+    align-items: center;
+}
+
+.login-form-section-button-centering {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-bottom: 1rem;
+}
+
+.login-form-section-button {
+    width: 300px;
+    height: 45px;
+    border-radius: 8px;
+    border-width: 1px;
+    background-color: #1E90FF;
+    color: white;
+    border: 1px solid lightgray;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-form-section-button:hover {
+    background-color: #4ba4fa;
+
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+    transform: translateY(-2px); /* Lifts the button slightly */
+}
+
+label {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+}
+
+input {
+    height: 1.75rem;
+}
+
+/* Sign Up Section */
+
+.signup-section {
+    border-top: 1px solid lightgray;
+    padding: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-section-button {
+    width: 300px;
+    height: 45px;
+    border-radius: 8px;
+    border-width: 1px;
+    border: 2px solid lightgray;
+    background-color: white;
+    color: black;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.signup-section-button:hover {
+    background-color: lightgray;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+    transform: translateY(-2px); /* Lifts the button slightly */
 }

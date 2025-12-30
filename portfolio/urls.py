@@ -16,11 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from dashboard.views import get_latest_balances, get_token_metadata, get_token_prices, index, login
+from dashboard.views import get_latest_balances, get_token_metadata, get_token_prices, index, login, dashboard
 
 urlpatterns = [
     path("", index, name="index"),
     path('login/', login, name="login"),
+    path('dashboard/', dashboard, name="dashboard"),
     path('admin/', admin.site.urls),
     path('api/balances/latest/', get_latest_balances),
     path('api/metadata/latest/', get_token_metadata),

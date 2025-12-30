@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pocket Chain - Home</title>
     <!-- Link to external stylesheet -->
-    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
 
     <!-- Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,13 +22,7 @@
     <header>
         <h1>PocketChain</h1>
 
-        <nav>
-            <ul>
-                <li>Home</li>
-            </ul>
-        </nav>
-
-        <button>Get Started</button>
+        <button>LOG IN</button>
     </header>
 
     <main>
@@ -85,7 +80,7 @@
         </div>
     </main>
     <footer>
-        
+
     </footer>
 </body>
 </html>

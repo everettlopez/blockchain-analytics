@@ -1,0 +1,46 @@
+.token-balances-column-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.token-balance-card {
+    display: flex;
+    flex-direction: row;
+
+    border: 1px solid lightgray;
+    padding:8px;
+
+    width: 33.33vw;
+
+    justify-content: space-evenly;
+}
+
+.token-balance-card-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.token-balance {
+    background-color: #00bf63;
+    width: 80px;
+    font-size: 17px;
+}
+
+.linechart-token_balance-section {
+    display: flex;
+    gap: 1rem;
+
+    justify-content: center;
+    
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    padding: 4rem;
+}

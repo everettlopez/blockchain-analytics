@@ -9,6 +9,9 @@ def index(request):
 def login(request):
     return render(request, "login.html")
 
+def dashboard(request):
+    return render(request, "dashboard.html")
+
 def get_latest_balances(request):
     data = list(
         Balance.objects.order_by("-timestamp")[:20].values()

@@ -1,4 +1,5 @@
 
+
 h2 {
     font-family: "Nunito", sans-serif;
     font-size: 32px;
@@ -9,6 +10,7 @@ h3 {
     padding: 0%;
     margin: 0%;
     font-size: 42px;
+    color: #1E90FF;
 }
 
 p {
@@ -27,18 +29,25 @@ header {
 }
 
 header button {
-    width: 150px;
-    height: 30px;
-    border-radius: 10px;
+    width: 200px;
+    height: 45px;
+    border-radius: 8px;
     border-width: 1px;
-    background-color: #d0312d;
+    background-color: #1E90FF;
     color: white;
+    border: 1px solid lightgray;
 
     font-family: "Poppins", sans-serif;
+    font-size: 17px;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header button:hover{
-    background-color: #bc544B;
+    background-color: #4ba4fa;
+
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+    transform: translateY(-2px); /* Lifts the button slightly */
 }
 
 /************* Welcome Section *************/
@@ -69,20 +78,23 @@ header button:hover{
 }
 
 .index-welcome-section-button-login {
-    width: 300px;
+    width: 325px;
     height: 45px;
     border-radius: 8px;
     border-width: 1px;
-    background-color: #d0312d;
+    background-color: #1E90FF;
     color: white;
 
+    border: 1px solid lightgray;
+
     font-family: "Poppins", sans-serif;
+    font-size: 15px;
 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .index-welcome-section-button-login:hover {
-    background-color: #bc544B;
+    background-color: #4ba4fa;
 
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
     transform: translateY(-2px); /* Lifts the button slightly */
@@ -90,7 +102,7 @@ header button:hover{
 
 .index-welcome-section-button-sign-up {
 
-    width: 300px;
+    width: 325px;
     height: 45px;
     border-radius: 8px;
     border-width: 1px;
@@ -99,6 +111,7 @@ header button:hover{
     color: black;
 
     font-family: "Poppins", sans-serif;
+    font-size: 15px;
 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -158,6 +171,8 @@ header button:hover{
 }
 
 .index-learning-section-text {
-    width: 33.33vw;
+    width: 40vw;
     text-align: center;
 }
+
+/* Footer Styling*/
