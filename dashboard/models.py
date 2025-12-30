@@ -9,7 +9,7 @@ class Price(models.Model):
         ordering = ["timestamp"]
 
     def __str__(self):
-        return f"{self.symbol} at {self.timestamp}: ${self.price_USD}"
+        return f"Timestamp: {self.timestamp}\nSymbol: {self.symbol}\nPrice USD: ${self.price_USD}"
     
 class Metadata(models.Model):
     address = models.CharField(max_length=42, unique=True)
@@ -18,7 +18,7 @@ class Metadata(models.Model):
     decimals = models.IntegerField()
 
     def __str__(self):
-        return f"Load {self.name} {self.symbol} metadata."
+        return f"Token Address: {self.address}\nName: {self.name}\nSymbol: {self.symbol}\nDecimals: {self.decimals}"
 
 class Balance(models.Model):
     timestamp = models.DateTimeField()
@@ -34,6 +34,6 @@ class Balance(models.Model):
         ordering = ["timestamp"]
 
     def __str__(self):
-        return f"{self.wallet} holds {self.adjusted_balance} of {self.symbol}"
+        return f"Timestamp: {self.timestamp}\nWallet: {self.wallet}\nContract Address: {self.contract_address}\nSymbol: {self.symbol}\nName: {self.name}\nRaw Balance: {self.raw_balance}\nDecimals: {self.decimals}\nAdjusted Balance: {self.adjusted_balance}"
     
 

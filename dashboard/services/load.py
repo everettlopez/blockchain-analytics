@@ -2,6 +2,8 @@ from dashboard.models import Price, Balance, Metadata
 from django.db import connection
 
 def load_prices(df):
+    connection.close()
+    connection.connect()
     
     records = []
     

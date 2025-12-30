@@ -1,6 +1,11 @@
 import pandas as pd
 
+############ Import Data from JSONL ############
+
 def load_raw_prices(path="data/prices.jsonl"):
+    return pd.read_json(path, lines=True)
+
+def import_metadata(path="data/metadata.jsonl"):
     return pd.read_json(path, lines=True)
 
 def normalize_prices(df):
@@ -10,8 +15,9 @@ def normalize_prices(df):
     
     return df[["timestamp", "symbol", "price_USD"]]
 
-def import_metadata(path="data/metadata.jsonl"):
+def import_balance(path="data/balances.jsonl"):
     return pd.read_json(path, lines=True)
+
 
 def normalize_metadata(df):
     decimal_list = df["data"].apply(lambda x: x["result"]["decimals"])
@@ -26,9 +32,6 @@ def normalize_metadata(df):
     decimal["decimals"] = decimal[0]
 
     return decimal[["address", "name", "symbol", "decimals"]]
-
-def import_balance(path="data/balances.jsonl"):
-    return pd.read_json(path, lines=True)
 
 def normalize_balances(df):
     token_lists = df["data"].apply(lambda x: x["result"]["tokenBalances"])
