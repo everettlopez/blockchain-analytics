@@ -3,8 +3,19 @@ from django.shortcuts import render
 from django.http import JsonResponse 
 from .models import Balance, Metadata, Price
 
+
 def index(request):
-    return render(request, "index.html")
+    tokens = ["BTC", "ETH", "LINK", "BNB", "USDT", "USDC"]
+
+    latest_prices = {}
+    
+
+    for symbol in tokens:
+        price = Price.objects.filter(symbol=symbol).order_by("-timestamp").first()
+        latest_prices[symbol] = price.price_USD if price else None
+    return render(request, "index.html", {
+        "latest_prices":latest_prices
+    })
 
 def login(request):
     return render(request, "login.html")

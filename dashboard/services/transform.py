@@ -12,6 +12,8 @@ def normalize_prices(df):
     df['timestamp'] = pd.to_datetime(df['timestamp'])
     df = df.rename(columns={'data': 'price_USD'})
     df = df.sort_values(by='timestamp')
+
+    df["price_USD"] = df["price_USD"].round(decimals=2)
     
     return df[["timestamp", "symbol", "price_USD"]]
 

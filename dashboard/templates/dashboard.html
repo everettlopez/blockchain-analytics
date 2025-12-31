@@ -19,41 +19,61 @@
 
 </head>
 
+
+
 <body>
+    <main class="main-content">
 
-    <main>
+        <div class="dashboard-side-one">
 
-        <div class="sidebar">
-            <ul>
-                <li><a>Dashboard</a></li>
-            </ul>
-        </div>
+            <div class="dashboard-balance-widget">
+                <span class="dashboard-balance-widget-label-text">Available Balance</span>
+                <span class="dashboard-balance-widget-label-balance">$12,000.00</span>
+                <span>0xd38....9345</span>
+            </div>
 
-        <div class="linechart-token_balance-section">
-            <div id="price-chart"></div>
+            <div class="dashboard-expense-income-widget-section">
 
-            <div class="token-balances-column-section">
+                <div class="dashboard-expense-widget">
 
-                <div class="token-balance-card">
+                    <div id="expense-sparkline" class="sparkline"></div>
 
-                    <div class="token-balance-card-text">
-                        <span>BNB</span>
-                        <span>1.725643</span>
+                    <div class="dashboard-expense-widget-text">
+                        <span>Expense</span>
+                        <span>$5,0000</span>
                     </div>
-
-                    <button class="token-balance">$0.00</button>
-                    <button class="">See More</button>
+                    
                 </div>
+
+                <div class="dashboard-income-widget">
+
+                    <div id="income-sparkline" class="sparkline"></div>
+                    <div class="dashboard-income-widget-text">
+                        <span>income</span>
+                        <span>$12,0000</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="dashboard-transaction-history-widget">
+                
+                <div class="dashboard-transaction-history-widget-labels">
+                    <span>Transaction History</span>
+                    <span>View all</span>
+                </div>
+
             </div>
         </div>
 
-        
-
     </main>
-    <footer>
 
-    </footer>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="{% static 'js/linechart.js' %}"></script>
+    <script src="{% static 'js/expense.js' %}"></script>
+    <script src="{% static 'js/income.js' %}"></script>
+
+    <!-- Insert Footer When Ready-->
+
 </body>
 </html>

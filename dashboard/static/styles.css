@@ -59,7 +59,7 @@ header button:hover{
     justify-content: center;
     align-items: center;
 
-    gap: 4rem;
+    gap: 5rem;
 
     padding: 55px 0px 55px 0px;
 
@@ -134,7 +134,7 @@ header button:hover{
 }
 
 .card {
-    width: 150px;
+    width: fit-content;
     font-family: "Nunito", sans-serif;
     font-size: 18px;
 
@@ -147,9 +147,7 @@ header button:hover{
     justify-content: center;
 }
 
-.card:hover {
-    background-color: lightgray;
-}
+/*  Removed the hover effect from the card*/
 
 .token-icon {
     height: 1.25rem;
@@ -167,7 +165,7 @@ header button:hover{
 
     gap: 4rem;
 
-    padding: 55px 0px 55px 0px;
+    padding: 75px 0px 75px 0px;
 }
 
 .index-learning-section-text {
