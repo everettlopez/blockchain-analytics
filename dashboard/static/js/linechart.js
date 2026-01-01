@@ -3,10 +3,13 @@
 const raw = document.getElementById("eth-data").textContent.trim(); 
 const data = JSON.parse(raw).map(d => ({ timestamp: new Date(d.timestamp), price: d.price }));
 
+
 // Chart dimensions
 const width = 400;
 const height = 200;
 const margin = { top: 20, right: 30, bottom: 30, left: 40 };
+
+
 
 // Create SVG
 const svg = d3.select("#price-chart")
@@ -19,9 +22,10 @@ const x = d3.scaleTime()
     .domain(d3.extent(data, d => d.timestamp))
     .range([margin.left, width - margin.right]);
 
-const y = d3.scaleLinear()
-    .domain([d3.min(data, d => d.price), d3.max(data, d => d.price)])
-    .range([height - margin.bottom, margin.top]);
+const minPrice = d3.min(data, d => d.price); 
+const maxPrice = d3.max(data, d => d.price); 
+const padding = (maxPrice - minPrice) * 0.1; 
+const y = d3.scaleLinear().domain([minPrice - padding, maxPrice + padding]).nice().range([height - margin.bottom, margin.top]);
 
 // Line generator
 const line = d3.line()

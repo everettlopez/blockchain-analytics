@@ -1,5 +1,6 @@
 body {
     padding: 2rem;
+    background-color: #f8f8f8;
 }
 
 .main-content {
@@ -17,11 +18,13 @@ body {
     border-radius: 12px;
 
     width: -webkit-fill-available;
-    gap: 5px;
+    gap: 15px;
 
     border: 1px solid lightgray;
 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    background-color: white;
 }
 
 .dashboard-balance-widget-label-text {
@@ -173,4 +176,73 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+
+/* Sidebar Navigation */
+
+.sidebar-navigation {
+    display: flex;
+    flex-direction: column;
+    font-family: "Nunito", sans-serif;
+
+    padding: 2rem;
+    border-radius: 12px;
+
+    width: 150px;
+    height: max-content;
+    gap: 1rem;
+
+    border: 1px solid lightgray;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    background-color: white;
+
+}
+
+.sidebar-navigation-profile-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar-navigation-profile-section-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    text-align: center;
+}
+
+.sidebar-navigation-profile-section-welcome-text {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: gray;
+}
+
+.sidebar-navigation-profile-section-name-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    color: black;
+}
+
+.sidebar-navigation-main-section {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+.sidebar-navigation-main-section-icon {
+    display: flex;
+    flex-direction: row;
+
+    gap: 5px;
+}
+
+.sidebar-dashboard-icon {
+    height: 1.5rem;
 }

@@ -22,7 +22,7 @@ def login(request):
     return render(request, "login.html")
 
 def dashboard(request): 
-    prices = Price.objects.filter(symbol="ETH").order_by("-timestamp") 
+    prices = Price.objects.filter(symbol="ETH").order_by("-timestamp")[:20]
     eth_prices_json = json.dumps([ { "timestamp": p.timestamp.isoformat(), "price": float(p.price_USD) } for p in prices ]) 
     return render(request, "dashboard.html", {"eth_prices_json": eth_prices_json})
 
