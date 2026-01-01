@@ -1,17 +1,11 @@
 // --- Simple D3 Line Chart Starter ---
 
-// Fake data for now (you'll replace this with real prices later)
-const data = [
-    { timestamp: new Date("2025-01-01"), price: 2200 },
-    { timestamp: new Date("2025-01-02"), price: 2250 },
-    { timestamp: new Date("2025-01-03"), price: 2300 },
-    { timestamp: new Date("2025-01-04"), price: 2280 },
-    { timestamp: new Date("2025-01-05"), price: 2350 }
-];
+const raw = document.getElementById("eth-data").textContent.trim(); 
+const data = JSON.parse(raw).map(d => ({ timestamp: new Date(d.timestamp), price: d.price }));
 
 // Chart dimensions
-const width = 600;
-const height = 300;
+const width = 400;
+const height = 200;
 const margin = { top: 20, right: 30, bottom: 30, left: 40 };
 
 // Create SVG

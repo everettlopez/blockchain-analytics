@@ -5,6 +5,7 @@ body {
 .main-content {
     display: flex;
     justify-content: center;
+    gap: 1rem;
 }
 
 .dashboard-balance-widget {
@@ -97,4 +98,79 @@ body {
 .dashboard-transaction-history-widget-labels {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-transaction-history-widget-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.dashboard-transaction-history-widget-entry {
+    padding-top: 5px;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    
+}
+
+.dashboard-transaction-history-widget-list-labels {
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
+    gap: 2px;
+}
+
+.dashboard-transaction-history-widget-list-values {
+    display: flex;
+    flex-direction: column;
+
+    text-align: right;
+    gap: 2px;
+}
+
+.dashboard-transaction-history-title {
+    font-family: "Nunito", sans-serif;
+    font-size: 24px;
+}
+
+.dashboard-transaction-history-timestamp-value {
+    font-family: "Nunito", sans-serif;
+    font-size: 14px;
+    color: gray;
+}
+
+
+/* Dashboard Side Two */
+.dashboard-side-two {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.dashboard-visualization-widget {
+    display: flex;
+    flex-direction: column;
+    font-family: "Nunito", sans-serif;
+
+    padding: 1rem;
+    border-radius: 12px;
+
+    width: -webkit-fill-available;
+    gap: 5px;
+
+    border: 1px solid lightgray;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-visualization-widget-labels {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

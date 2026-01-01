@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 from django.http import JsonResponse 
 from .models import Balance, Metadata, Price
+import json
 
 
 def index(request):
@@ -20,8 +21,11 @@ def index(request):
 def login(request):
     return render(request, "login.html")
 
-def dashboard(request):
-    return render(request, "dashboard.html")
+def dashboard(request): 
+    prices = Price.objects.filter(symbol="ETH").order_by("-timestamp") 
+    eth_prices_json = json.dumps([ { "timestamp": p.timestamp.isoformat(), "price": float(p.price_USD) } for p in prices ]) 
+    return render(request, "dashboard.html", {"eth_prices_json": eth_prices_json})
+
 
 def get_latest_balances(request):
     data = list(

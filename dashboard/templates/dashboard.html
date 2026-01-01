@@ -24,16 +24,20 @@
 <body>
     <main class="main-content">
 
+        <!-- Side One of the Dashboard -->
         <div class="dashboard-side-one">
 
+            <!-- Balance Widget-->
             <div class="dashboard-balance-widget">
                 <span class="dashboard-balance-widget-label-text">Available Balance</span>
                 <span class="dashboard-balance-widget-label-balance">$12,000.00</span>
                 <span>0xd38....9345</span>
             </div>
 
+            <!-- Expense / Income Section-->
             <div class="dashboard-expense-income-widget-section">
 
+                <!-- Expense Widget-->
                 <div class="dashboard-expense-widget">
 
                     <div id="expense-sparkline" class="sparkline"></div>
@@ -45,24 +49,74 @@
                     
                 </div>
 
+                <!-- Income Widget-->
                 <div class="dashboard-income-widget">
 
                     <div id="income-sparkline" class="sparkline"></div>
                     <div class="dashboard-income-widget-text">
-                        <span>income</span>
+                        <span>Income</span>
                         <span>$12,0000</span>
                     </div>
                 </div>
 
             </div>
 
+            <!-- Transaction History Widget-->
             <div class="dashboard-transaction-history-widget">
                 
                 <div class="dashboard-transaction-history-widget-labels">
-                    <span>Transaction History</span>
-                    <span>View all</span>
+                    <span class="dashboard-transaction-history-title">Transaction History</span>
+                    <span><a href="">View all</a></span>
                 </div>
 
+                <div class="dashboard-transaction-history-widget-list">
+
+                    <div class="dashboard-transaction-history-widget-entry">
+
+                        <div class="dashboard-transaction-history-widget-list-labels">
+                            <span>Market Sell</span>
+                            <span class="dashboard-transaction-history-timestamp-value">Sep 14, 2025</span>
+                        </div>
+
+                        <div class="dashboard-transaction-history-widget-list-values">
+                            <span>+$3.07</span>
+                            <span class="dashboard-transaction-history-timestamp-value">0.645235 at $4,576.00</span>
+                        </div>
+                        
+                    </div>
+
+                    <div class="dashboard-transaction-history-widget-entry">
+
+                        <div class="dashboard-transaction-history-widget-list-labels">
+                            <span>ETH Received</span>
+                            <span class="dashboard-transaction-history-timestamp-value">Sep 11, 2025</span>
+                        </div>
+
+                        <div class="dashboard-transaction-history-widget-list-values">
+                            <span>+0.0062687 ETH</span>
+                            <span class="dashboard-transaction-history-timestamp-value">est. $3.00</span>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="dashboard-side-two">
+
+            <div class="dashboard-visualization-widget">
+                <div class="dashboard-visualization-widget-labels">
+                    <span>Expense Estatitics</span>
+                    <span><a href="">Filter</a></span>
+                </div>
+
+
+                <div id="price-chart"></div>
+
+                <script id="eth-data" type="application/json">{{ eth_prices_json|safe }}</script>
+                
             </div>
         </div>
 
