@@ -26,6 +26,8 @@
     background-color: white;
     border-radius: 20px;
     /* align-items: center; */
+
+    gap: 20px;
 }
 
 .login-form {
@@ -74,4 +76,24 @@
 
 .login-form button:hover {
     background-color: rgb(246, 98, 98);
+}
+
+.create-account-button {
+    background-color:white;
+    color: IndianRed;
+    width: fill;
+    height: 50px;
+    border: 2px solid rgb(146, 144, 144);
+    border-radius: 10px;
+    font-size: 17px;
+
+    align-content:center;
+    text-decoration:none;
+    text-align: center;
+
+    box-shadow: 0 6px rgb(146, 144, 144);
+    cursor: pointer;
+    transition: all 0.1s ease;
+
+    
 }
