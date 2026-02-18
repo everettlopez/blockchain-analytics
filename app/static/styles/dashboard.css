@@ -1,0 +1,45 @@
+.dashboard-layout {
+    display: flex;
+    flex-direction: row;
+
+    height: 100vh;
+}
+
+.dashboard-menu {
+    display: flex;
+    flex-direction: column;
+
+    width: 15%;
+
+    justify-content: space-around;
+
+    padding: 15px;
+    
+    font-family: sans-serif;
+
+    align-items: center;
+}
+
+.dashboard-menu-navigation {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.dashboard-main {
+    display: flex;
+    flex-direction:column;
+
+    width:100%;
+
+    padding: 15px;
+}
+
+.dashboard-main-header {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
+    align-items: center;
+}
