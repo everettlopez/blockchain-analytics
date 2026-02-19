@@ -1,3 +1,8 @@
+.dashboard-html {
+    background-color: indianred;
+}
+
+
 .dashboard-layout {
     display: flex;
     flex-direction: row;
@@ -40,6 +45,44 @@
     display: flex;
     flex-direction: row;
 
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+
+    font-family: "Poppins", sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.dashboard-main-analytics-section {
+    border-radius: 20px;
+    padding: 20px;
+    height: 100vh;
+    background-color: lightgray;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.dashboard-main-analytics-section-header {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+}
+
+.dashboard-main-analytics-section-header-subsection-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-main-analytics-section-token-cards {
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboard-main-analytics-section-token-cards-container {
+    display: flex;
+    flex-direction: column;
 }

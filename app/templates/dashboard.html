@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dashboard-html">
 <head>
     <meta charset="UTF-8">
     <title>PocketChain - Dashboard</title>
@@ -29,12 +29,37 @@
         </div>
 
         <div class="dashboard-main">
+            
             <div class="dashboard-main-header">
+
                 <h1>DASHBOARD</h1>
                 <form>
                     <input type="search" placeholder="Search for features"/>
                 </form>
                 <span>Notifications</span>
+            </div>
+
+            <div class="dashboard-main-analytics-section">
+
+                <div class="dashboard-main-analytics-section-header">
+                    <div class="dashboard-main-analytics-section-header-subsection-1">
+                        <span>Sample Wallet</span>
+                        <span>{{wallet_address}}</span>
+                    </div>
+
+                    <div class="dashboard-main-analytics-section-header-subsection-1">
+                        <span>Today</span>
+                        <span>[Trend Today]</span>
+                    </div>
+                </div>
+
+                <div class="dashboard-main-analytics-section-token-cards">
+
+                    <div class="dashboard-main-analytics-section-token-cards-container"> 
+                        <span>BTC</span>
+                        <span>[Price Tracker]</span>
+                    </div>
+                </div>
             </div>
         </div>
 
