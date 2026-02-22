@@ -54,10 +54,39 @@
                 </div>
 
                 <div class="dashboard-main-analytics-section-token-cards">
-
+                    
+                    {% for symbol, token in takens_by_wallet.items %}
                     <div class="dashboard-main-analytics-section-token-cards-container"> 
-                        <span>BTC</span>
-                        <span>[Price Tracker]</span>
+
+                        <div class="dashboard-main-analytics-section-token-cards-container-header">
+                            <img src="{{token.tokenMetadata.logo}}" alt="Logo" class="dashboard-main-analytics-section-token-cards-container-img"/>
+
+                            <div class="dashboard-main-analytics-section-token-cards-container-header-text">
+                                <span>{{ token.tokenMetadata.name }}</span>
+                                <span>{{symbol}}</span>
+                            </div>
+                            
+                            
+                        </div>
+
+                        <div>
+                            <span>${{token.tokenPrices.0.value|floatformat:2 }}</span>
+                        </div>
+                    
+                    </div>
+                    {%  endfor %}
+
+
+                </div>
+
+                <div class="dashboard-main-analytics-section-portfolio">
+                    <div class="dashboard-main-analytics-section-portfolio-token-balance">
+                        <h2>Portfolio</h2>
+
+                        {% for symbol, token in takens_by_wallet.items %}
+                        <span>{{symbol}}</span>
+                        <span>{{symbol}} Price: ${{token.tokenPrices.0.value}}</span>
+                        {%  endfor %}
                     </div>
                 </div>
             </div>

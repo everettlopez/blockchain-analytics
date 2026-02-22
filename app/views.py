@@ -18,22 +18,24 @@ def signup(request):
 
 def dashboard(request):
 
-    wallet_address = "0x220866B1A2219f40e72f5c628B65D54268cA3A9D"
+    wallet_address = "0x1E6E8695FAb3Eb382534915eA8d7Cc1D1994B152"
 
     data = fetch_tokens_by_wallet(wallet_address)
 
     addresses = data.get("addresses", []) 
-    tokens = addresses[0].get("tokens", []) if addresses else []
+    takens_by_wallet = data.get("tokens", [])
 
     token_map = {}
 
-    for t in tokens:
-        symbol = t["metadata"].get("symbol")
+    for t in takens_by_wallet:
+        meta = t.get("tokenMetadata", {})
+        symbol = meta.get("symbol")
+
 
         if symbol:
-            token_map[symbol] = t
+            token_map[symbol] = t 
 
     return render(request, "dashboard.html", {
-        "tokens": token_map,
+        "takens_by_wallet": token_map,
         "wallet_address": wallet_address
     })
