@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" class="dashboard-html">
+<head>
+    <meta charset="UTF-8">
+    <title>PocketChain - Dashboard</title>
+    <link rel="stylesheet" href="/static/styles/main.css">
+    <link rel="stylesheet" href="/static/styles/dashboard.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="dashboard-layout">
+
+        <div class="dashboard-menu">
+
+            <span>Logo Here</span>
+
+            <div class="dashboard-menu-navigation">
+                <span>Profile</span>
+                <span>Dashboard</span>
+                <span>Simulate</span>
+            </div>
+
+            <span>LOGOUT</span>
+        </div>
+
+        <div class="dashboard-main">
+            
+            <div class="dashboard-main-header">
+
+                <h1>DASHBOARD</h1>
+                <form>
+                    <input type="search" placeholder="Search for features"/>
+                </form>
+                <span>Notifications</span>
+            </div>
+
+            <div class="dashboard-main-analytics-section">
+
+                <div class="dashboard-main-analytics-section-header">
+                    <div class="dashboard-main-analytics-section-header-subsection-1">
+                        <span>Sample Wallet</span>
+                        <span>{{wallet_address}}</span>
+                    </div>
+
+                    <div class="dashboard-main-analytics-section-header-subsection-1">
+                        <span>Today</span>
+                        <span>[Trend Today]</span>
+                    </div>
+                </div>
+
+                <div class="dashboard-main-analytics-section-token-cards">
+                    
+                    {% for symbol, token in takens_by_wallet.items %}
+                    <div class="dashboard-main-analytics-section-token-cards-container"> 
+
+                        <div class="dashboard-main-analytics-section-token-cards-container-header">
+                            <img src="{{token.tokenMetadata.logo}}" alt="Logo" class="dashboard-main-analytics-section-token-cards-container-img"/>
+
+                            <div class="dashboard-main-analytics-section-token-cards-container-header-text">
+                                <span>{{ token.tokenMetadata.name }}</span>
+                                <span>{{symbol}}</span>
+                            </div>
+                            
+                            
+                        </div>
+
+                        <div>
+                            <span>${{token.tokenPrices.0.value|floatformat:2 }}</span>
+                        </div>
+                    
+                    </div>
+                    {%  endfor %}
+
+
+                </div>
+
+                <div class="dashboard-main-analytics-section-portfolio">
+                    <div class="dashboard-main-analytics-section-portfolio-token-balance">
+                        <h2>Portfolio</h2>
+
+                        {% for symbol, token in takens_by_wallet.items %}
+                        <span>{{symbol}}</span>
+                        <span>{{symbol}} Price: ${{token.tokenPrices.0.value}}</span>
+                        {%  endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+    </div>
+
+
+        
+</body>
+</html>
